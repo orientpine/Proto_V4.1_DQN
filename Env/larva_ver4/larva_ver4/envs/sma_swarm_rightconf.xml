@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<robot name="smaswarm">
+
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+    
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+    
+
+    <link name="head">
+        <visual>
+            <geometry>
+                <!-- 단위는 meter인것 같음-->
+                <!-- 구현할 때 길이는 10배, 무게는 1000배해서 모델링함-->
+                <box size="0.1 0.01 0.05"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 0 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <!-- 단위는 meter인것 같음-->
+                <box size="0.1 0.01 0.05"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 0 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.025"/>
+            <inertia ixx="0.00000541" ixy="0.0" ixz="0.0" iyy="0.0000260" iyz="0.0" izz="0.0000210"/>
+            <origin rpy="1.570796 0 0" xyz="0 0 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+  	</link>
+
+    <link name="body1">
+        <visual>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0.0000420" ixy="0.0" ixz="0.0" iyy="0.00083" iyz="0.0" izz="0.0000420"/>
+            <origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+    </link>
+
+    <link name="body2">
+        <visual>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0.0000420" ixy="0.0" ixz="0.0" iyy="0.00083" iyz="0.0" izz="0.0000420"/>
+            <origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+    </link>
+
+    <link name="body3">
+        <visual>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0.0000420" ixy="0.0" ixz="0.0" iyy="0.00083" iyz="0.0" izz="0.0000420"/>
+            <origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+    </link>
+
+    <link name="body4">
+        <visual>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.01 0.1"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.05"/>
+            <inertia ixx="0.0000420" ixy="0.0" ixz="0.0" iyy="0.00083" iyz="0.0" izz="0.0000420"/>
+            <origin rpy="1.570796 0 0" xyz="0 -0.055 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+    </link>
+
+    <link name="tail">
+        <visual>
+            <geometry>
+                <!-- 단위는 meter인것 같음-->
+                <!-- 구현할 때 길이는 10배, 무게는 1000배해서 모델링함-->
+                <box size="0.1 0.01 0.05"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.03 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <!-- 단위는 meter인것 같음-->
+                <box size="0.1 0.01 0.05"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.03 0"/>
+            <contact_coefficients mu="1.5" />
+        </collision>
+        <inertial>
+            <mass value="0.025"/>
+            <inertia ixx="0.00000541" ixy="0.0" ixz="0.0" iyy="0.0000260" iyz="0.0" izz="0.0000210"/>
+            <origin rpy="1.570796 0 0" xyz="0 -0.03 0"/>
+        </inertial>
+        <contact>
+            <restitution value="0.1"/>
+        </contact>
+    </link>
+    
+    <joint name="joint1" type="revolute">
+        <parent link="head"/>
+        <child link="body1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1.5707963" upper="1.5707963" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.03 0"/>
+    </joint>
+
+    <joint name="joint2" type="revolute">
+        <parent link="body1"/>
+        <child link="body2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1.5707963" upper="1.5707963" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.11 0"/>
+    </joint>
+
+    <joint name="joint3" type="revolute">
+        <parent link="body2"/>
+        <child link="body3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1.5707963" upper="1.5707963" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.11 0"/>
+    </joint>
+
+    <joint name="joint4" type="revolute">
+        <parent link="body3"/>
+        <child link="body4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1.5707963" upper="1.5707963" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.11 0"/>
+    </joint>
+
+    <joint name="joint5" type="revolute">
+        <parent link="body4"/>
+        <child link="tail"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1.5707963" upper="1.5707963" velocity="100.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.11 0"/>
+    </joint>
+
+
+</robot>

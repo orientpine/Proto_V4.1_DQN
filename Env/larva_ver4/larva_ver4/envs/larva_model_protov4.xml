@@ -1,0 +1,1854 @@
+<?xml version="1.0"?>
+<robot name="larva_protov4">
+
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+    
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+
+    <material name="gray">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+
+    <material name="yellow">
+        <color rgba="1 1 0 1"/>
+    </material>
+
+<!-- 길이 단위는 meter인것 같음-->
+<!-- 무게 단위는 kg인것 같음-->
+<!-- 구현할 때 길이는 10배, 무게는 1000배해서 모델링함-->   
+    <link name="head">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.04"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 0 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.04"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0320"/>
+            <inertia ixx="0.0000042907" ixy="0.0" ixz="0.0" iyy="0.0000244507" iyz="0.0" izz="0.000020208"/>
+          	<origin rpy="1.570796 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="tail">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.04"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0235 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.04"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0235 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0320"/>
+            <inertia ixx="0.0000042907" ixy="0.0" ixz="0.0" iyy="0.0000244507" iyz="0.0" izz="0.000020208"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0235 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="part0_0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/> <!---0.0075 는 0.007/2 + 0.008/2-->
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part0_1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part0_2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part0_3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part0_4">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="part1_0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part1_1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part1_2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part1_3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part1_4">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="part2_0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part2_1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part2_2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part2_3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part2_4">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="part3_0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part3_1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part3_2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part3_3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part3_4">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="part4_0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part4_1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part4_2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part4_3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="part4_4">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+
+    <link name="hinge0">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="hinge1">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="hinge2">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <link name="hinge3">
+        <visual>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.087 0.003 0.008"/>
+            </geometry>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0.0064"/>
+            <inertia ixx="0.00000003893" ixy="0.0" ixz="0.0" iyy="0.00000407093" iyz="0.0" izz="0.0000040416"/>
+          	<origin rpy="1.570796 0 0" xyz="0 -0.0075 0"/>
+        </inertial>
+
+    </link>
+    <!--=====================================================================================================-->
+    <link name="rot0_0">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot0_1">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot0_2">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot0_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot0_4">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot0_5">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_0">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_1">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_2">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_4">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot1_5">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_0">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_1">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_2">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_4">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot2_5">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_0">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_1">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_2">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_4">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot3_5">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_0">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_1">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_2">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_3">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_4">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot4_5">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot_head">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <link name="rot_tail">
+        <visual>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.087" radius="0.0015"/>
+            </geometry>
+          	<origin rpy="0 1.570796 0" xyz="0 0 0"/>
+            <contact_coefficients mu= "0." />
+        </collision>
+        <inertial>
+            <mass value="0"/>
+            <inertia ixx="0.00" ixy="0.0" ixz="0.0" iyy="0.0000" iyz="0.0" izz="0.0000"/>
+          	<origin rpy="0 0 0" xyz="0 0 0"/>
+        </inertial>
+
+    </link>
+    <!--  -->
+    <!--=====================================================================================================-->
+    <joint name="j_head_part0_0" type="revolute">
+        <parent link="head"/>
+        <child link="part0_0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.0235 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part0_0_part0_1" type="revolute">
+        <parent link="part0_0"/>
+        <child link="part0_1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part0_1_part0_2" type="revolute">
+        <parent link="part0_1"/>
+        <child link="part0_2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part0_2_part0_3" type="revolute">
+        <parent link="part0_2"/>
+        <child link="part0_3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part0_3_part0_4" type="revolute">
+        <parent link="part0_3"/>
+        <child link="part0_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part0_4_hinge0" type="revolute">
+        <parent link="part0_4"/>
+        <child link="hinge0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+    <joint name="j_hinge0_part1_0" type="revolute">
+        <parent link="hinge0"/>
+        <child link="part1_0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+    
+    <joint name="j_part1_0_part1_1" type="revolute">
+        <parent link="part1_0"/>
+        <child link="part1_1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part1_1_part1_2" type="revolute">
+        <parent link="part1_1"/>
+        <child link="part1_2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part1_2_part1_3" type="revolute">
+        <parent link="part1_2"/>
+        <child link="part1_3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part1_3_part1_4" type="revolute">
+        <parent link="part1_3"/>
+        <child link="part1_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part1_4_hinge1" type="revolute">
+        <parent link="part1_4"/>
+        <child link="hinge1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_hinge1_part2_0" type="revolute">
+        <parent link="hinge1"/>
+        <child link="part2_0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+    
+    <joint name="j_part2_0_part2_1" type="revolute">
+        <parent link="part2_0"/>
+        <child link="part2_1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part2_1_part2_2" type="revolute">
+        <parent link="part2_1"/>
+        <child link="part2_2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part2_2_part2_3" type="revolute">
+        <parent link="part2_2"/>
+        <child link="part2_3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part2_3_part2_4" type="revolute">
+        <parent link="part2_3"/>
+        <child link="part2_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part2_4_hinge2" type="revolute">
+        <parent link="part2_4"/>
+        <child link="hinge2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_hinge2_part3_0" type="revolute">
+        <parent link="hinge2"/>
+        <child link="part3_0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+    
+    <joint name="j_part3_0_part3_1" type="revolute">
+        <parent link="part3_0"/>
+        <child link="part3_1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part3_1_part3_2" type="revolute">
+        <parent link="part3_1"/>
+        <child link="part3_2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part3_2_part3_3" type="revolute">
+        <parent link="part3_2"/>
+        <child link="part3_3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part3_3_part3_4" type="revolute">
+        <parent link="part3_3"/>
+        <child link="part3_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part3_4_hinge3" type="revolute">
+        <parent link="part3_4"/>
+        <child link="hinge3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_hinge3_part4_0" type="revolute">
+        <parent link="hinge3"/>
+        <child link="part4_0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+    
+    <joint name="j_part4_0_part4_1" type="revolute">
+        <parent link="part4_0"/>
+        <child link="part4_1"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part4_1_part4_2" type="revolute">
+        <parent link="part4_1"/>
+        <child link="part4_2"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part4_2_part4_3" type="revolute">
+        <parent link="part4_2"/>
+        <child link="part4_3"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part4_3_part4_4" type="revolute">
+        <parent link="part4_3"/>
+        <child link="part4_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+
+    <joint name="j_part4_4_tail" type="revolute">
+        <parent link="part4_4"/>
+        <child link="tail"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="100.0" lower="-0.2618" upper="0.2618" velocity="0.0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+        <dynamics damping="0." friction="0."/>
+    </joint>
+<!--=========================================================================================================-->
+    <joint name="j_head_rot0_0" type="fixed">
+        <parent link="head"/>
+        <child link="rot0_0"/>
+        <origin rpy="0 0 0" xyz="0 -0.0235 0"/>
+    </joint>
+    <joint name="j_part0_0_rot0_1" type="fixed">
+        <parent link="part0_0"/>
+        <child link="rot0_1"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part0_1_rot0_2" type="fixed">
+        <parent link="part0_1"/>
+        <child link="rot0_2"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part0_2_rot0_3" type="fixed">
+        <parent link="part0_2"/>
+        <child link="rot0_3"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part0_3_rot0_4" type="fixed">
+        <parent link="part0_3"/>
+        <child link="rot0_4"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part0_4_rot0_5" type="fixed">
+        <parent link="part0_4"/>
+        <child link="rot0_5"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+
+    <joint name="j_hinge0_rot1_0" type="fixed">
+        <parent link="hinge0"/>
+        <child link="rot1_0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part1_0_rot1_1" type="fixed">
+        <parent link="part1_0"/>
+        <child link="rot1_1"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part1_1_rot1_2" type="fixed">
+        <parent link="part1_1"/>
+        <child link="rot1_2"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part1_2_rot1_3" type="fixed">
+        <parent link="part1_2"/>
+        <child link="rot1_3"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part1_3_rot1_4" type="fixed">
+        <parent link="part1_3"/>
+        <child link="rot1_4"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part1_4_rot1_5" type="fixed">
+        <parent link="part1_4"/>
+        <child link="rot1_5"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+
+    <joint name="j_hinge1_rot2_0" type="fixed">
+        <parent link="hinge1"/>
+        <child link="rot2_0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part2_0_rot2_1" type="fixed">
+        <parent link="part2_0"/>
+        <child link="rot2_1"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part2_1_rot2_2" type="fixed">
+        <parent link="part2_1"/>
+        <child link="rot2_2"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part2_2_rot2_3" type="fixed">
+        <parent link="part2_2"/>
+        <child link="rot2_3"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part2_3_rot2_4" type="fixed">
+        <parent link="part2_3"/>
+        <child link="rot2_4"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part2_4_rot2_5" type="fixed">
+        <parent link="part2_4"/>
+        <child link="rot2_5"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_hinge2_rot3_0" type="fixed">
+        <parent link="hinge2"/>
+        <child link="rot3_0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part3_0_rot3_1" type="fixed">
+        <parent link="part3_0"/>
+        <child link="rot3_1"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part3_1_rot3_2" type="fixed">
+        <parent link="part3_1"/>
+        <child link="rot3_2"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part3_2_rot3_3" type="fixed">
+        <parent link="part3_2"/>
+        <child link="rot3_3"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part3_3_rot3_4" type="fixed">
+        <parent link="part3_3"/>
+        <child link="rot3_4"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part3_4_rot3_5" type="fixed">
+        <parent link="part3_4"/>
+        <child link="rot3_5"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_hinge3_rot4_0" type="fixed">
+        <parent link="hinge3"/>
+        <child link="rot4_0"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part4_0_rot4_1" type="fixed">
+        <parent link="part4_0"/>
+        <child link="rot4_1"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part4_1_rot4_2" type="fixed">
+        <parent link="part4_1"/>
+        <child link="rot4_2"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part4_2_rot4_3" type="fixed">
+        <parent link="part4_2"/>
+        <child link="rot4_3"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part4_3_rot4_4" type="fixed">
+        <parent link="part4_3"/>
+        <child link="rot4_4"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+    <joint name="j_part4_4_rot4_5" type="fixed">
+        <parent link="part4_4"/>
+        <child link="rot4_5"/>
+        <origin rpy="0 0 0" xyz="0 -0.015 0"/>
+    </joint>
+
+    <joint name="j_head_rot_head" type="fixed">
+        <parent link="head"/>
+        <child link="rot_head"/>
+        <origin rpy="0 0 0" xyz="0 0.02 0"/>
+    </joint>
+    <joint name="j_tail_rot_head" type="fixed">
+        <parent link="tail"/>
+        <child link="rot_tail"/>
+        <origin rpy="0 0 0" xyz="0 -0.0435 0"/>
+    </joint>
+</robot>
