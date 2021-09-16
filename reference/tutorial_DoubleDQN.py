@@ -156,7 +156,6 @@ def main():
                 scores.append(score)
                 episodes.append(e)
                 pylab.plot(episodes, scores, 'b')
-                print(len(episodes))
                 if len(episodes) >= size_average:
                     average_score = [np.mean(scores[:-(size_average+1):-1])] # scores가 100개 이상일 때, 100개의 scores를 평균내서 moving average를 구함
                     average_scores = np.concatenate([average_scores,average_score])
