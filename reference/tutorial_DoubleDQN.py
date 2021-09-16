@@ -159,9 +159,9 @@ def main():
                 if len(episodes) >= size_average:
                     average_score = [np.mean(scores[:-(size_average+1):-1])] # scores가 100개 이상일 때, 100개의 scores를 평균내서 moving average를 구함
                     average_scores = np.concatenate([average_scores,average_score])
-                    display_average_scores = np.concatenate([np.zeros(size_average-1), average_scores])
+                    #display_average_scores = np.concatenate([np.zeros(size_average-1), average_scores])
                      # 그리기 위해서 0~100에 해당하는 값을 추가함
-                    pylab.plot(episodes, display_average_scores, 'tab:orange')
+                    pylab.plot(episodes, np.concatenate([np.zeros(size_average-1), average_scores]), 'tab:orange')
 
                 pylab.savefig("./save_graph/balanceBot_ddqn.png")
                 print("episode:", e, "  score:", score, "  memory length:",
