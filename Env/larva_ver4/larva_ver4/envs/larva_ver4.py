@@ -32,13 +32,14 @@ class larva_ver4Env(gym.Env):
 
     def __init__(self, render=False):
         self.Forward = False
+        self.onaction = -50
         
 
         self._observation = []
         #========================================================================== action 수 변경: 원래는 65 ======================
         self.action_space = spaces.MultiDiscrete([5,5,5,5,5])
-        self.observation_space = spaces.Box(np.array([ -5*scaler , -5*scaler, -1.5708, -1.5708, -1.5708, -1.5708, -1.5708, -50]),
-                                            np.array([  5*scaler ,  5*scaler,  1.5708,  1.5708,  1.5708,  1.5708,  1.5708,  50]))# 속도, 변위, 스위치ON/OFF
+        self.observation_space = spaces.Box(np.array([ -5*scaler , -5*scaler, -1.5708, -1.5708, -1.5708, -1.5708, -1.5708, -50, -50]),
+                                            np.array([  5*scaler ,  5*scaler,  1.5708,  1.5708,  1.5708,  1.5708,  1.5708,  50,  50]))# 속도, 변위, 스위치ON/OFF
         
         if (Isrender):  # render`
             self.physicsClient = p.connect(p.GUI)
@@ -69,6 +70,7 @@ class larva_ver4Env(gym.Env):
         if self._envStepCounter%(onTime) == 0: # 0.5초마다 액션을 바꿔주기 위함
             # 직전 신호가 None이면 패스
             if Step_count < 15:
+                self.onaction = 50
                 tmp_action = []
                 for i in range(0,5):
                     if self._previousAction[i] != 2:
@@ -78,6 +80,7 @@ class larva_ver4Env(gym.Env):
                 Step_count = Step_count + 1
                 self.move_reward += p.getLinkState(bodyUniqueId=self.swamId, linkIndex=29)[0][1] - self.static_tail_pos
             else:
+                self.onaction = -50
                 tmp_action = [2,2,2,2,2]
                 self.static_tail_pos = p.getLinkState(bodyUniqueId=self.swamId, linkIndex=29)[0][1]
                 self.move_reward = 0
@@ -159,7 +162,8 @@ class larva_ver4Env(gym.Env):
         headStartPos = [0, 0.522*scaler/2, 0.0016*scaler]
         
         headStartOrientation = p.getQuaternionFromEuler([0,  0, 0])
-        path = os.path.abspath(os.path.dirname(__file__))
+        path = os.path.relpath(os.path.dirname(__file__))
+        print(path)
         self.swamId = p.loadURDF(os.path.join(
             path, "larva_model_protov4.xml"), headStartPos, headStartOrientation) #larva_model_protov4.xml 는 10배짜리 모델
 
@@ -289,7 +293,7 @@ class larva_ver4Env(gym.Env):
         self.last_pos_tail = tail_pos
         self.last_pos_head = head_pos
 
-        return [self.headVelocity, self.tailVelocity, self.vt[0], self.vt[1], self.vt[2], self.vt[3], self.vt[4],self.input]
+        return [self.headVelocity, self.tailVelocity, self.vt[0], self.vt[1], self.vt[2], self.vt[3], self.vt[4],self.input,self.onaction]
 
     def _compute_reward(self):
         # reward 계산

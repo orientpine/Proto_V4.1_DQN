@@ -8,7 +8,6 @@ from stable_baselines.common.policies import MlpLstmPolicy
 from stable_baselines.common.vec_env import DummyVecEnv
 #from ppo2 import PPO2
 from ppo2 import PPO2
-from utils.saveandload import save, load
 import argparse
 
 # 개별로 만든 환경을 import하기 위해서는 해당 Env 폴더의 setup.py가 있는 dir에서 
@@ -36,7 +35,7 @@ args = vars(ap.parse_args())
 
 mode = args['mode']
 #env = BipedalWalker()
-env = gym.make("larva_ver4-v0")
+env = gym.make("larva_ver4-v1")
 
 
 # Register the policy, it will check that the name is not already taken
