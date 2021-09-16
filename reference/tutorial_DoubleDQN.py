@@ -153,7 +153,7 @@ def main():
                 scores.append(score)
                 episodes.append(e)
                 pylab.plot(episodes, scores, 'b')
-                pylab.savefig("/save_graph/balanceBot_ddqn.png")
+                pylab.savefig("./save_graph/balanceBot_ddqn.png")
                 print("episode:", e, "  score:", score, "  memory length:",
                       len(agent.memory), "  epsilon:", agent.epsilon)
 
@@ -164,7 +164,7 @@ def main():
 
         # save the model
         if e % 50 == 0:
-            agent.model.save_weights("/save_model/balanceBot_ddqn.h5")
+            agent.model.save_weights("./save_model/balanceBot_ddqn.h5")
 
 
 if __name__ == "__main__":

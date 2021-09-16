@@ -61,7 +61,7 @@ class BalancebotEnv(gym.Env):
         cubeStartPos = [0,0,0.001]
         cubeStartOrientation = p.getQuaternionFromEuler([0,0,0])
 
-        path = os.path.abspath(os.path.dirname(__file__))
+        path = os.path.relpath(os.path.dirname(__file__))
         self.botId = p.loadURDF(os.path.join(path, "balancebot_simple.xml"),
                            cubeStartPos,
                            cubeStartOrientation)
