@@ -10,6 +10,7 @@ from keras.layers import Dense
 from keras.optimizers import Adam
 from keras.models import Sequential
 
+import wandb
 
 EPISODES = 3000
 
