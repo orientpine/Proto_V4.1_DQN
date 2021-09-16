@@ -117,11 +117,14 @@ def main():
 
     agent = DoubleDQNAgent(state_size, action_size)
 
-    scores, average_scores,episodes = [], [],[]
+    scores, average_scores, episodes = [], [],[]
 
     for e in range(EPISODES):
         done = False
         score = 0
+        
+        size_average = 5
+
         state = env.reset()
         state = np.reshape(state, [1, state_size])
 
@@ -153,11 +156,14 @@ def main():
                 scores.append(score)
                 episodes.append(e)
                 pylab.plot(episodes, scores, 'b')
-                if episodes >= 100:
-                    average_score = np.mean(scores[:-101:-1]) # scores가 100개 이상일 때, 100개의 scores를 평균내서 moving average를 구함
-                    average_scores.append(average_score)
-                    average_scores = np.concatenate([[0 for _ in range(0,100)],average_scores]) # 그리기 위해서 0~100에 해당하는 값을 추가함
-                    pylab.plot(episodes, average_scores, 'r')
+                print(len(episodes))
+                if len(episodes) >= size_average:
+                    average_score = [np.mean(scores[:-(size_average+1):-1])] # scores가 100개 이상일 때, 100개의 scores를 평균내서 moving average를 구함
+                    average_scores = np.concatenate([average_scores,average_score])
+                    display_average_scores = np.concatenate([np.zeros(size_average-1), average_scores])
+                     # 그리기 위해서 0~100에 해당하는 값을 추가함
+                    pylab.plot(episodes, display_average_scores, 'tab:orange')
+
                 pylab.savefig("./save_graph/balanceBot_ddqn.png")
                 print("episode:", e, "  score:", score, "  memory length:",
                       len(agent.memory), "  epsilon:", agent.epsilon)
