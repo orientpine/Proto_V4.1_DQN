@@ -12,13 +12,13 @@ from keras.models import Sequential
 
 import wandb
 
-EPISODES = 3000
+EPISODES = 300
 
 class DoubleDQNAgent:
     def __init__(self, state_size, action_size):
         # if you want to see Cartpole learning, then change to True
         self.render = True
-        self.load_model = False
+        self.load_model = True
         # get size of state and action
         self.state_size = state_size
         self.action_size = action_size
