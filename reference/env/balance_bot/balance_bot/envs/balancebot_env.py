@@ -75,8 +75,8 @@ class BalancebotEnv(gym.Env):
         deltav = [-10.*dv,-5.*dv, -2.*dv, -0.1*dv, 0, 0.1*dv, 2.*dv,5.*dv, 10.*dv][action]
         vt = clamp(self.vt + deltav, -self.maxV, self.maxV)
         self.vt = vt
-        print(f'vt :{type(vt)}')
-        print(action)
+        #print(f'vt :{type(vt)}')
+        #print(action)
 
         p.setJointMotorControl2(bodyUniqueId=self.botId, 
                                 jointIndex=0, 

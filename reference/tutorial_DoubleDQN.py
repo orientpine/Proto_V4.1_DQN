@@ -11,7 +11,7 @@ from keras.optimizers import Adam
 from keras.models import Sequential
 
 
-EPISODES = 300
+EPISODES = 3000
 
 class DoubleDQNAgent:
     def __init__(self, state_size, action_size):
@@ -41,7 +41,7 @@ class DoubleDQNAgent:
         self.update_target_model()
 
         if self.load_model:
-            self.model.load_weights("C:/Users/Scientist/balancebot-project/balance_bot_task/save_model/balanceBot_ddqn.h5")
+            self.model.load_weights("./save_model/balanceBot_ddqn.h5")
 
     def build_model(self):
         model = Sequential()
@@ -117,7 +117,7 @@ def main():
 
     agent = DoubleDQNAgent(state_size, action_size)
 
-    scores, episodes = [], []
+    scores, average_scores,episodes = [], [],[]
 
     for e in range(EPISODES):
         done = False
@@ -153,6 +153,11 @@ def main():
                 scores.append(score)
                 episodes.append(e)
                 pylab.plot(episodes, scores, 'b')
+                if episodes >= 100:
+                    average_score = np.mean(scores[:-101:-1]) # scores가 100개 이상일 때, 100개의 scores를 평균내서 moving average를 구함
+                    average_scores.append(average_score)
+                    average_scores = np.concatenate([[0 for _ in range(0,100)],average_scores]) # 그리기 위해서 0~100에 해당하는 값을 추가함
+                    pylab.plot(episodes, average_scores, 'r')
                 pylab.savefig("./save_graph/balanceBot_ddqn.png")
                 print("episode:", e, "  score:", score, "  memory length:",
                       len(agent.memory), "  epsilon:", agent.epsilon)
